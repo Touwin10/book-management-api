@@ -1,0 +1,9 @@
+.idea/
+.vscode/
+node_modules/
+build/
+dist/
+tmp/
+temp/
+
+# .env -- This line should be uncommented for development purpose
