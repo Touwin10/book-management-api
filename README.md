@@ -1,11 +1,13 @@
 ## Simple Book Management API
 
-This is a sample book management API using:
+This is a sample CRUD book management API using:
 
 - Mongodb
 - NodeJS
 - Express
 - Swagger
+- TypeScript
+- TypeORM
 
 ## Requirements
 
