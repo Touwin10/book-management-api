@@ -1,21 +1,22 @@
+import { AuthorService } from "../services/author.service";
 import { Request, Response } from "express";
-import { Book } from "../models/book.model";
-import { BookService } from "../services/book.service";
+import { Author } from "../models/author.model";
 
-export class BookController {
 
-    bookService: BookService;
+export class AuthorController{
+    
+    authorService: AuthorService;
 
     constructor() {
-        this.bookService = new BookService();
+        this.authorService = new AuthorService();
     }
 
     public create = async (req: Request, res: Response) => {
 
-        const book = req.body as Book;
+        const body = req.body as Author;
 
         try {
-            const result  = await this.bookService.create(book);
+            const result  = await this.authorService.create(body);
             res.status(200).send(result);
         } catch (err) {
             res.status(400).send(err.message);
@@ -24,11 +25,11 @@ export class BookController {
 
     public update = async (req: Request, res: Response) => {
 
-        const book = req.body as Book;
+        const body = req.body as Author;
         const { id } = req.params;
 
         try {
-            const result  = await this.bookService.update(id, book);
+            const result  = await this.authorService.update(id, body);
             res.status(200).send(result);
         } catch (err) {
             res.status(400).send(err.message);
@@ -40,7 +41,7 @@ export class BookController {
         const { id } = req.params;
 
         try {
-            const result  = await this.bookService.delete(id);
+            const result  = await this.authorService.delete(id);
             res.status(200).send(result);
         } catch (err) {
             res.status(400).send(err.message);
@@ -49,7 +50,7 @@ export class BookController {
 
     public findAll = async (req: Request, res: Response) => {
         try {
-            const result  = await this.bookService.findAll();
+            const result  = await this.authorService.findAll();
             res.status(200).send(result);
         } catch (err) {
             res.status(400).send(err.message);

@@ -10,4 +10,19 @@ export class Book{
     @Column() 
     name: string; 
 
+    price:number;
+    subject:string;
+    publicationDate:Date;
+    genre: Genre;
+
+}
+
+
+export enum Genre {
+    ADVENTURE = 0,
+    HORROR = 1,
+    FANTASY = 2,
+    MYSTERY = 3,
+    ROMANCE = 4,
+    THRILLER = 5
 }
