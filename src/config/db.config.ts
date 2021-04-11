@@ -24,7 +24,7 @@ export const config: ConnectionOptions = {
   useUnifiedTopology: true,
 
   ...(prod && {
-    database: "production",
+    database: DB_NAME,
     logging: false,
   }),
 
