@@ -44,3 +44,12 @@ The project uses MongoDB as a database. If you are on Mac and using Homebrew pac
 ### API documentation - Swagger
 
 Navigate to http://localhost:3100/api-docs/#/ to have look on the endpoint using in the application. 
+
+
+##### Using Docker Container
+
+Run in this directory:
+```
+docker-compose up
+```
+The app will be running at [http://localhost:3100](http://localhost:3100)
