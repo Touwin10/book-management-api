@@ -46,7 +46,7 @@ The project uses MongoDB as a database. If you are on Mac and using Homebrew pac
 Navigate to http://localhost:3100/api-docs/#/ to have look on the endpoint using in the application. 
 
 
-##### Using Docker Container
+### Using Docker Container
 
 Run in this directory:
 ```
